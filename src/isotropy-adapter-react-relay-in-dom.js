@@ -40,7 +40,7 @@ const renderRelayContainer = async function(params: RenderRelayContainerArgsType
 
   const rootContainerProps = {
     Container: Container,
-    queryConfig: new RelayRoute({})
+    queryConfig: new RelayRoute(args)
   };
 
   const environment = new Relay.Environment();
