@@ -4,6 +4,11 @@ declare module "react-relay" {
   declare class DefaultNetworkLayer {
     constructor(graphqlUrl: string) : void;
   }
+
+  declare class Environment {
+    constructor() : void;
+    injectNetworkLayer(layer: any): void;
+  }
 }
 
 

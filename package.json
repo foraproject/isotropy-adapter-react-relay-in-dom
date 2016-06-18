@@ -1,7 +1,7 @@
 {
   "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
   "name": "isotropy-adapter-react-relay-in-dom",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "React browser-adapter for Isotropy.",
   "repository": {
     "type": "git",
