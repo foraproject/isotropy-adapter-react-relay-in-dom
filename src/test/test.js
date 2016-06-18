@@ -33,11 +33,10 @@ describe("Isotropy browser adapter for React (incomplete tests)", () => {
 
   it(`Renders a React UI`, () => {
     setupJSDOM();
-    const component = MyComponent;
     const context = {};
 
     adapter.render({
-      component,
+      Component: MyComponent,
       args: { name: "Jeswin"},
       context,
       elementSelector: "#isotropy-container"
@@ -48,12 +47,11 @@ describe("Isotropy browser adapter for React (incomplete tests)", () => {
 
   it(`Calls onRender`, () => {
     setupJSDOM();
-    const component = MyComponent;
     const context = {};
     let onRenderCalled = false;
 
     adapter.render({
-      component,
+      Component: MyComponent,
       args: { name: "Jeswin"},
       context,
       onRender: function() {
@@ -75,8 +73,8 @@ describe("Isotropy browser adapter for React (incomplete tests)", () => {
         resolve();
       };
       adapter.renderRelayContainer({
-        relayContainer,
-        relayRoute: MyRelayRoute,
+        Container: MyRelayContainer,
+        RelayRoute: MyRelayRoute,
         args: { id: "200" },
         context,
         graphqlUrl,
@@ -90,7 +88,7 @@ describe("Isotropy browser adapter for React (incomplete tests)", () => {
     const relayContainer = MyRelayContainer;
     const context = {};
     let onRenderCalled = false;
-    
+
     return new Promise((resolve, reject) => {
       const graphqlUrl = `http://localhost:8080/graphql`;
       window.onDataLoad = () => {
@@ -98,8 +96,8 @@ describe("Isotropy browser adapter for React (incomplete tests)", () => {
         resolve();
       };
       adapter.renderRelayContainer({
-        relayContainer,
-        relayRoute: MyRelayRoute,
+        Container: MyRelayContainer,
+        RelayRoute: MyRelayRoute,
         args: { id: "200" },
         context,
         graphqlUrl,
